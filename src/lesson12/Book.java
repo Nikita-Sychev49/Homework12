@@ -2,21 +2,23 @@ package lesson12;
 
 public class Book {
     private String title;
-    private Author nameAuthor;
+    private Author Author;
     private int yearPublication;
 
-    public Book(String title, Author nameAuthor, int yearPublication){
+    public Book(String title, Author Author, int yearPublication) {
         this.title = title;
-        this.nameAuthor = nameAuthor;
+        this.Author = Author;
         this.yearPublication = yearPublication;
     }
 
     public String getTitle() {
         return this.title;
     }
-    public Author getNameAuthor() {
-        return this.nameAuthor;
+
+    public Author getAuthor() {
+        return this.Author;
     }
+
     public int getYearPublication() {
         return this.yearPublication;
     }

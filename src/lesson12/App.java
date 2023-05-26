@@ -4,20 +4,24 @@ public class App {
     public static void printParagraph() {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
+
+    public static void printBookInfo(Book book, Author author) {
+        System.out.println("Книга - " +book.getTitle()+ "\n" + "Автор - " + book.getAuthor().getFirstName() + " "
+                +book.getAuthor().getMiddleNameName()+ "\n" + "Год публикации - " + book.getYearPublication());
+    }
+
     public static void main(String[] args) {
         printParagraph();
         Author nameAuthor1 = new Author("Лев", "Толстой");
         Book warAndPeace = new Book("Война и мир", nameAuthor1, 1964);
-        System.out.println("Книга - " + warAndPeace.getTitle() + "\n" + "Автор - " + nameAuthor1.getFirstName() + " " +
-                nameAuthor1.getMiddleNameName() + "\n" + "Год публикации - " + warAndPeace.getYearPublication());
+        printBookInfo(warAndPeace, nameAuthor1);
         printParagraph();
         Author nameAuthor2 = new Author("Евгений", "Онегин");
         Book letterToTatiana = new Book("Письмо Татьяне", nameAuthor2, 1967);
-        System.out.println("Книга - " + letterToTatiana.getTitle() + "\n" + "Автор - " + nameAuthor2.getFirstName() + " " +
-                nameAuthor2.getMiddleNameName() + "\n" + "Год публикации - " + letterToTatiana.getYearPublication());
+        printBookInfo(letterToTatiana, nameAuthor2);
         printParagraph();
         letterToTatiana.setYearPublication(1980);
-        System.out.println("Изменили год на " + letterToTatiana.getYearPublication());
+        System.out.println("Изменили год публикации 'Письмо татьяне' на " + letterToTatiana.getYearPublication());
     }
 
 }
