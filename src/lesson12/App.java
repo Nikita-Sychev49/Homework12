@@ -14,14 +14,19 @@ public class App {
         printParagraph();
         Author nameAuthor1 = new Author("Лев", "Толстой");
         Book warAndPeace = new Book("Война и мир", nameAuthor1, 1964);
-        printBookInfo(warAndPeace, nameAuthor1);
+        System.out.println(warAndPeace);
         printParagraph();
         Author nameAuthor2 = new Author("Евгений", "Онегин");
         Book letterToTatiana = new Book("Письмо Татьяне", nameAuthor2, 1967);
-        printBookInfo(letterToTatiana, nameAuthor2);
+        System.out.println(letterToTatiana);
         printParagraph();
-        letterToTatiana.setYearPublication(1980);
-        System.out.println("Изменили год публикации 'Письмо татьяне' на " + letterToTatiana.getYearPublication());
-    }
 
+        if (warAndPeace.equals(letterToTatiana)) {
+            System.out.println("Книги одинаковые");
+        } else {
+            System.out.println("Книги разные");
+        }
+
+
+    }
 }
